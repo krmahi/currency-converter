@@ -59,11 +59,11 @@ const CurrencyConverter = () => {
     settoCurrency(fromCurrency);
   };
   return (
-    <div className="max-w-xl mx-auto my-10 p-5 bg-white rounded-lg shadow-lg">
-      <h2 className="mb-8 text-2xl font-semibold text-gray-700">
+    <div className="max-w-xl mx-auto my-10 p-5 dark:bg-[#262626] rounded-lg shadow-lg">
+      <h2 className="mb-8 text-2xl font-semibold dark:text-[#B4B4B4]">
         Currency Converter
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end dark:text-[#B4B4B4]">
         <Dropdown
           favorites={favorites}
           currencies={currencies}
@@ -76,7 +76,7 @@ const CurrencyConverter = () => {
         <div className="flex justify-center -mb-5 sm:mb-0">
           <button
             onClick={swapCurrencies}
-            className="p-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-300"
+            className="p-2 dark:bg-[#343434] rounded-full cursor-pointer dark:hover:bg-[#3d3d3d]"
           >
             <HiArrowsRightLeft />
           </button>
@@ -93,7 +93,7 @@ const CurrencyConverter = () => {
       <div className="mt-4">
         <label
           htmlFor="amount"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium dark:text-[#B4B4B4]"
         >
           Amount:
         </label>
@@ -102,13 +102,13 @@ const CurrencyConverter = () => {
           id="amount"
           onChange={(e) => setamount(e.target.value)}
           type="number"
-          className="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 mt-1"
+          className="w-full p-2 dark:bg-[#262626] dark:text-[#B4B4B4] border dark:border-[#959595] rounded-lg shadow-sm focus:outline-none focus:ring-2 dark:focus:ring-[#659CA3] mt-1"
         />
       </div>
       <div className="flex justify-end mt-6">
         <button
           onClick={convertCurrency}
-          className={`px-5 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ${
+          className={`px-5 py-2 bg-[#659CA3] text-white rounded-lg hover:bg-[#4d777c] focus:outline-none  ${
             converting ? "animate-pulse" : ""
           }`}
         >
@@ -116,7 +116,7 @@ const CurrencyConverter = () => {
         </button>
       </div>
       {convertedAmount && (
-        <div className="mt-4 text-lg font-medium text-right text-red-600">
+        <div className="mt-4 text-lg font-medium text-right text-[#659CA3]">
           Converted Amount: {convertedAmount}
         </div>
       )}

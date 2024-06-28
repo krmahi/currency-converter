@@ -14,7 +14,7 @@ const currencyDropdown = ({
     <div>
       <label
         htmlFor={title}
-        className="block text-sm font-medium text-gray-700"
+        className="block text-sm font-medium dark:text-[#B4B4B4]"
       >
         {title}
       </label>
@@ -22,12 +22,12 @@ const currencyDropdown = ({
         <select
           value={currency}
           onChange={(e) => setCurrency(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full p-2 dark:bg-[#343434] border dark:border-[#959595] rounded-lg shadow-sm focus:outline-none focus:ring-2 dark:focus:ring-[#659CA3] overflow-hidden"
         >
           {favorites.map((currency) => {
             return (
               <option
-                className="bg-neutral-200"
+                className="dark:bg-[#4d4d4d]"
                 value={currency}
                 key={currency}
               >
